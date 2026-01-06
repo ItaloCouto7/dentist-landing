@@ -1,0 +1,341 @@
+// Cores - ajuste conforme sua paleta
+$color-primary: #3b82f6;
+$color-primary-foreground: #ffffff;
+$color-secondary: #f1f5f9;
+$color-background: #ffffff;
+$color-foreground: #0f172a;
+$color-muted: #f1f5f9;
+$color-muted-foreground: #64748b;
+$color-card: #ffffff;
+$color-card-foreground: #0f172a;
+$color-border: #e2e8f0;
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, 
+    $color-background, 
+    rgba($color-muted, 0.3), 
+    $color-background
+  );
+}
+
+// Decorative elements
+.decorative-container {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.decorative-blob {
+  position: absolute;
+  width: 24rem;
+  height: 24rem;
+  border-radius: 50%;
+  filter: blur(64px);
+  opacity: 0;
+  transform: scale(0.8);
+  animation: fadeInScale 1.2s ease-out forwards;
+
+  &.decorative-blob-1 {
+    top: 5rem;
+    right: 5rem;
+    background-color: $color-secondary;
+  }
+
+  &.decorative-blob-2 {
+    bottom: 5rem;
+    left: 5rem;
+    background-color: $color-primary;
+    animation-delay: 0.3s;
+  }
+}
+
+// Content wrapper
+.content-wrapper {
+  position: relative;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+  display: grid;
+  gap: 3rem;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 5rem 3rem;
+  }
+}
+
+// Text content
+.text-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.8s ease-out 0.2s forwards;
+}
+
+.logo-container {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.3s forwards;
+
+  .logo {
+    height: 6rem;
+    margin-bottom: 1.5rem;
+
+    @media (min-width: 768px) {
+      height: 8rem;
+    }
+  }
+}
+
+.badge {
+  display: inline-block;
+  width: fit-content;
+  background-color: rgba($color-secondary, 0.6);
+  color: $color-primary;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  backdrop-filter: blur(4px);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.5s forwards;
+}
+
+.title {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  color: $color-foreground;
+  font-weight: 700;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.6s forwards;
+
+  @media (min-width: 768px) {
+    font-size: 3.75rem;
+  }
+
+  .title-highlight {
+    color: $color-primary;
+  }
+}
+
+.description {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: $color-muted-foreground;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.7s forwards;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.8s forwards;
+
+  @media (min-width: 640px) {
+    flex-direction: row;
+  }
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  font-size: 1rem;
+
+  .icon {
+    transition: transform 0.3s ease;
+  }
+
+  &.btn-primary {
+    background-color: $color-primary;
+    color: $color-primary-foreground;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+    &:hover {
+      background-color: darken($color-primary, 5%);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+
+      .icon {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &.btn-secondary {
+    background-color: $color-card;
+    color: $color-card-foreground;
+    border: 1px solid $color-border;
+
+    &:hover {
+      background-color: $color-muted;
+    }
+  }
+}
+
+// Image content
+.image-content {
+  position: relative;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: scaleIn 0.8s ease-out 0.4s forwards;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+
+  .main-image {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+  }
+
+  .image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba($color-primary, 0.2), transparent);
+  }
+}
+
+.floating-badge {
+  position: absolute;
+  bottom: -1.5rem;
+  left: -1.5rem;
+  background-color: $color-card;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  border: 1px solid $color-border;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 1s forwards;
+
+  .badge-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .badge-icon {
+    background-color: rgba($color-secondary, 0.6);
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+
+    svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      color: $color-primary;
+    }
+  }
+
+  .badge-number {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $color-foreground;
+    margin: 0;
+  }
+
+  .badge-text {
+    font-size: 0.875rem;
+    color: $color-muted-foreground;
+    margin: 0;
+  }
+}
+
+// Scroll indicator
+.scroll-indicator {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: fadeIn 1s ease-out 1.2s forwards;
+}
+
+.scroll-wheel {
+  width: 1.5rem;
+  height: 2.5rem;
+  border: 2px solid rgba($color-primary, 0.3);
+  border-radius: 9999px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0.5rem;
+  animation: scrollBounce 1.5s ease-in-out infinite;
+
+  .scroll-dot {
+    width: 0.375rem;
+    height: 0.375rem;
+    background-color: $color-primary;
+    border-radius: 9999px;
+  }
+}
+
+// Animations
+@keyframes fadeInScale {
+  to {
+    opacity: 0.05;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}

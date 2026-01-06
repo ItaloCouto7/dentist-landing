@@ -1,0 +1,87 @@
+<section class="hero-section">
+  <!-- Decorative elements -->
+  <div class="decorative-container">
+    <div class="decorative-blob decorative-blob-1"></div>
+    <div class="decorative-blob decorative-blob-2"></div>
+  </div>
+
+  <div class="content-wrapper">
+    <!-- Text Content -->
+    <div class="text-content">
+      <div class="logo-container">
+        <img [src]="logoImage" alt="Carolini Coutinho Chaves" class="logo" />
+      </div>
+
+      <div class="badge">
+        Cirurgiã-Dentista | Odontologia Estética
+      </div>
+
+      <h1 class="title">
+        Seu sorriso merece o
+        <span class="title-highlight">melhor cuidado</span>
+      </h1>
+
+      <p class="description">
+        Transforme seu sorriso com tratamentos modernos, em um ambiente acolhedor e com atendimento humanizado.
+      </p>
+
+      <div class="button-group">
+        <button (click)="onWhatsAppClick()" class="btn btn-primary">
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          Agendar Consulta pelo WhatsApp
+        </button>
+        
+        <button (click)="scrollToServices()" class="btn btn-secondary">
+          <svg class="icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+            <path d="M5 3v4"></path>
+            <path d="M19 17v4"></path>
+            <path d="M3 5h4"></path>
+            <path d="M17 19h4"></path>
+          </svg>
+          Ver Tratamentos
+        </button>
+      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="image-content">
+      <div class="image-wrapper">
+        <img
+          src="https://images.unsplash.com/photo-1565090567208-c8038cfcf6cd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW50aXN0JTIwcHJvZmVzc2lvbmFsJTIwd29tYW58ZW58MXx8fHwxNzY3NzEwMzg0fDA&ixlib=rb-4.1.0&q=80&w=1080"
+          alt="Dentista Profissional"
+          class="main-image"
+        />
+        <div class="image-overlay"></div>
+      </div>
+      
+      <!-- Floating Badge -->
+      <div class="floating-badge">
+        <div class="badge-content">
+          <div class="badge-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+              <path d="M5 3v4"></path>
+              <path d="M19 17v4"></path>
+              <path d="M3 5h4"></path>
+              <path d="M17 19h4"></path>
+            </svg>
+          </div>
+          <div>
+            <p class="badge-number">+1000</p>
+            <p class="badge-text">Sorrisos transformados</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator">
+    <div class="scroll-wheel">
+      <div class="scroll-dot"></div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,231 @@
+.about-section {
+  padding: 6rem 0;
+  background-color: hsl(var(--card));
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  @media (min-width: 768px) {
+    padding: 0 3rem;
+  }
+}
+
+.grid {
+  display: grid;
+  gap: 4rem;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Image Section
+.image-container {
+  position: relative;
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.image-wrapper {
+  position: relative;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.clinic-image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, hsl(var(--primary) / 0.1), transparent);
+}
+
+.stats-card {
+  position: absolute;
+  bottom: -2rem;
+  right: -2rem;
+  background-color: hsl(var(--card));
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8px);
+  border: 1px solid hsl(var(--border));
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.3s forwards;
+
+  @media (max-width: 768px) {
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+.stat-item {
+  text-align: center;
+  opacity: 0;
+  transform: scale(0.8);
+  animation: scaleIn 0.4s ease-out forwards;
+
+  &:nth-child(1) {
+    animation-delay: 0.4s;
+  }
+
+  &:nth-child(2) {
+    animation-delay: 0.5s;
+  }
+
+  &:nth-child(3) {
+    animation-delay: 0.6s;
+  }
+}
+
+.stat-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: hsl(var(--primary));
+  margin: 0 auto 0.5rem;
+}
+
+.stat-value {
+  font-size: 1.25rem;
+  color: hsl(var(--foreground));
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 0.75rem;
+  color: hsl(var(--muted-foreground));
+  margin: 0;
+}
+
+// Content Section
+.content-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  opacity: 0;
+  transform: translateX(50px);
+  animation: slideInRight 0.8s ease-out 0.2s forwards;
+}
+
+.badge {
+  display: inline-block;
+  background-color: hsl(var(--secondary) / 0.2);
+  color: hsl(var(--primary));
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  width: fit-content;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.3s forwards;
+}
+
+.title {
+  font-size: 2.25rem;
+  color: hsl(var(--foreground));
+  line-height: 1.2;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.4s forwards;
+
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+}
+
+.highlight {
+  color: hsl(var(--primary));
+}
+
+.description {
+  color: hsl(var(--muted-foreground));
+  line-height: 1.75;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(20px);
+
+  &:nth-of-type(1) {
+    animation: fadeInUp 0.6s ease-out 0.5s forwards;
+  }
+
+  &:nth-of-type(2) {
+    animation: fadeInUp 0.6s ease-out 0.6s forwards;
+  }
+}
+
+.credentials {
+  padding-top: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.7s forwards;
+}
+
+.credentials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.credentials-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.credential-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: hsl(var(--foreground));
+}
+
+.credential-dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background-color: hsl(var(--primary));
+  border-radius: 9999px;
+}
+
+// Animations
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
