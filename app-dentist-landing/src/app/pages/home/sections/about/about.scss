@@ -1,3 +1,19 @@
+$color-primary: #5c4033;
+$color-primary-foreground: #ffffff;
+$color-secondary: #e6cec5;
+$color-background: #fdf3f1;
+$color-foreground: #5c4033;
+$color-muted: #fdf3f1;
+$color-muted-foreground: #8e8279;
+$color-card: #ffffff;
+$color-card-foreground: #5c4033;
+$color-border: #e6cec5;
+$brown-dark: #4D362B;
+$brown-light:#775050;
+
+$font-title: 'Playfair Display', serif;
+$font-body: 'Montserrat', sans-serif;
+
 .about-section {
   padding: 6rem 0;
   background-color: hsl(var(--card));
@@ -54,8 +70,10 @@
   position: absolute;
   bottom: -2rem;
   right: -2rem;
-  background-color: hsl(var(--card));
+  background-color: white;
+  font-family: $font-body;
   padding: 1rem;
+  color: #5c4033;
   border-radius: 1rem;
   box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(8px);
@@ -123,25 +141,28 @@
 
 .badge {
   display: inline-block;
-  background-color: hsl(var(--secondary) / 0.2);
-  color: hsl(var(--primary));
-  padding: 0.5rem 1rem;
+  width: fit-content;
+  background-color: #f1e4e0;
+  color: #a67c6d;
+  padding: 0.5rem 1.25rem;
   border-radius: 9999px;
   font-size: 0.875rem;
-  width: fit-content;
+  font-weight: 500;
+  font-family: $font-body;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 0.6s ease-out 0.3s forwards;
+  animation: fadeInUp 0.6s ease-out 0.5s forwards;
 }
 
 .title {
   font-size: 2.25rem;
-  color: hsl(var(--foreground));
+  color: $brown-dark;
   line-height: 1.2;
   margin: 0;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease-out 0.4s forwards;
+  font-family: $font-body;
 
   @media (min-width: 768px) {
     font-size: 2.5rem;
@@ -149,7 +170,7 @@
 }
 
 .highlight {
-  color: hsl(var(--primary));
+  color: $color-foreground;
 }
 
 .description {
@@ -158,6 +179,8 @@
   margin: 0;
   opacity: 0;
   transform: translateY(20px);
+  font-family: $font-body;
+  color: $brown-light;
 
   &:nth-of-type(1) {
     animation: fadeInUp 0.6s ease-out 0.5s forwards;
@@ -169,29 +192,37 @@
 }
 
 .credentials {
-  padding-top: 1rem;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 0.6s ease-out 0.7s forwards;
+  margin-top: 1rem;
 }
 
 .credentials-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+.credential-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: $color-primary;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: $font-body;
+
+  &::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    background-color: $color-primary;
+    border-radius: 50%;
+  }
 }
 
 .credentials-column {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
-
-.credential-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: hsl(var(--foreground));
 }
 
 .credential-dot {
