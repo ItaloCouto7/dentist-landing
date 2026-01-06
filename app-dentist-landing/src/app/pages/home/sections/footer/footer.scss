@@ -1,0 +1,137 @@
+.footer {
+  background: var(--primary, #007bff);
+  color: var(--primary-foreground, #ffffff);
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  @media (min-width: 768px) {
+    padding: 0 3rem;
+  }
+}
+
+// Footer Grid
+.footer-grid {
+  display: grid;
+  gap: 3rem;
+  margin-bottom: 3rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+// Logo Section
+.footer-logo {
+  height: 4rem;
+  margin-bottom: 1rem;
+  filter: brightness(0) invert(1);
+  opacity: 0.9;
+}
+
+.footer-description {
+  color: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.8);
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+// Links Section
+.footer-title {
+  color: var(--primary-foreground, #ffffff);
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-link {
+  color: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.8);
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: var(--primary-foreground, #ffffff);
+  }
+}
+
+// Social Section
+.social-links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.social-button {
+  background: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.1);
+  border: none;
+  padding: 0.75rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.2);
+  }
+
+  .social-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+    color: var(--primary-foreground, #ffffff);
+  }
+}
+
+.whatsapp-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--secondary, #28a745);
+  color: var(--secondary-foreground, #ffffff);
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: rgba(var(--secondary-rgb, 40, 167, 69), 0.9);
+  }
+
+  .button-icon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
+}
+
+// Footer Bottom
+.footer-bottom {
+  border-top: 1px solid rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.1);
+  padding-top: 2rem;
+  text-align: center;
+}
+
+.copyright {
+  color: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.6);
+  font-size: 0.875rem;
+  margin: 0;
+}

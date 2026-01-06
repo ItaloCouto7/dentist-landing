@@ -1,1 +1,71 @@
-<p>before-after works!</p>
+<section class="before-after">
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="badge">
+        Resultados Reais
+      </div>
+      
+      <h2 class="title">
+        Transformações que <span class="highlight">falam por si</span>
+      </h2>
+      
+      <p class="description">
+        Veja alguns dos resultados alcançados com nossos tratamentos
+      </p>
+    </div>
+
+    <!-- Grid -->
+    <div class="grid">
+      <div *ngFor="let item of cases; let i = index" class="card-wrapper">
+        <div class="card">
+          <!-- Images Container -->
+          <div class="images-container">
+            <!-- Before -->
+            <div class="before-section">
+              <img
+                [src]="item.before"
+                alt="Antes"
+                class="image"
+              />
+              <div class="label label-before">
+                Antes
+              </div>
+            </div>
+
+            <!-- After -->
+            <div class="after-section">
+              <img
+                [src]="item.after"
+                alt="Depois"
+                class="image image-after"
+              />
+              <div class="label label-after">
+                Depois
+              </div>
+            </div>
+
+            <!-- Divider -->
+            <div class="divider">
+              <div class="divider-icon">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14m-7-7l7 7-7 7"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Label -->
+          <div class="treatment-label">
+            <p>{{ item.treatment }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Note -->
+    <div class="note">
+      <p>*Resultados podem variar de acordo com cada caso</p>
+    </div>
+  </div>
+</section>

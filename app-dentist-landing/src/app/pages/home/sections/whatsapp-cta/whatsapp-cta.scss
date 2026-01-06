@@ -1,0 +1,164 @@
+.whatsapp-cta {
+  padding: 6rem 0;
+  background: linear-gradient(to bottom right, var(--primary, #007bff), rgba(var(--primary-rgb, 0, 123, 255), 0.95), var(--secondary, #6c757d));
+  position: relative;
+  overflow: hidden;
+}
+
+// Background decoration
+.background-decoration {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.decoration-blob {
+  position: absolute;
+  width: 24rem;
+  height: 24rem;
+  background: var(--primary-foreground, #ffffff);
+  border-radius: 9999px;
+  filter: blur(64px);
+  opacity: 0.1;
+}
+
+.decoration-blob-top {
+  top: -5rem;
+  right: -5rem;
+}
+
+.decoration-blob-bottom {
+  bottom: -5rem;
+  left: -5rem;
+}
+
+// Container
+.container {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  position: relative;
+  z-index: 10;
+
+  @media (min-width: 768px) {
+    padding: 0 3rem;
+  }
+}
+
+.content {
+  text-align: center;
+}
+
+// Badge
+.badge {
+  display: inline-block;
+  background: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.2);
+  color: var(--primary-foreground, #ffffff);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(4px);
+}
+
+// Title
+.title {
+  font-size: 2.25rem;
+  color: var(--primary-foreground, #ffffff);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+
+  .title-highlight {
+    display: block;
+    margin-top: 0.5rem;
+  }
+}
+
+// Description
+.description {
+  color: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.9);
+  font-size: 1.125rem;
+  margin-bottom: 2.5rem;
+  max-width: 42rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Features
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 2.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--primary-foreground, #ffffff);
+}
+
+.feature-icon {
+  background: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.2);
+  padding: 0.75rem;
+  border-radius: 0.75rem;
+  backdrop-filter: blur(4px);
+
+  .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+// CTA Button
+.cta-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: var(--primary-foreground, #ffffff);
+  color: var(--primary, #007bff);
+  padding: 1.25rem 2.5rem;
+  border-radius: 9999px;
+  font-size: 1.125rem;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 35px 60px -15px rgba(0, 0, 0, 0.3);
+  }
+
+  &:active {
+    transform: scale(0.95);
+  }
+
+  .button-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  &:hover .button-icon {
+    transform: scale(1.1);
+  }
+}
+
+// Trust Badge
+.trust-badge {
+  color: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.7);
+  font-size: 0.875rem;
+  margin: 0;
+}

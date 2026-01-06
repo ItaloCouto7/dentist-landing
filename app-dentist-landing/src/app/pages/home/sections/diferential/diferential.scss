@@ -1,0 +1,125 @@
+.differentials-section {
+  padding: 6rem 0;
+  background-color: hsl(var(--muted) / 0.3);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  @media (min-width: 768px) {
+    padding: 0 3rem;
+  }
+}
+
+// Header
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.badge {
+  display: inline-block;
+  background-color: hsl(var(--secondary) / 0.2);
+  color: hsl(var(--primary));
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.1s forwards;
+}
+
+.title {
+  font-size: 2.25rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.2s forwards;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+.highlight {
+  color: hsl(var(--primary));
+}
+
+// Grid
+.differentials-grid {
+  display: grid;
+  gap: 2rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.differential-item {
+  text-align: center;
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  animation: scaleInUp 0.6s ease-out forwards;
+}
+
+.icon-container {
+  background: linear-gradient(135deg, hsl(var(--secondary) / 0.3), hsl(var(--primary) / 0.2));
+  width: 5rem;
+  height: 5rem;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease;
+
+  .differential-item:hover & {
+    transform: scale(1.1) rotate(360deg);
+  }
+}
+
+.icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: hsl(var(--primary));
+}
+
+.item-title {
+  font-size: 1.25rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.75rem;
+}
+
+.item-description {
+  color: hsl(var(--muted-foreground));
+  line-height: 1.75;
+  margin: 0;
+}
+
+// Animations
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}

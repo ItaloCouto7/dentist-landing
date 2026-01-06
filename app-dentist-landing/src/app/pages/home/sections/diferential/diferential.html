@@ -1,0 +1,54 @@
+<section class="differentials-section">
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="badge">
+        Nossos Diferenciais
+      </div>
+      
+      <h2 class="title">
+        Por que escolher a <span class="highlight">Dra. Carolini</span>?
+      </h2>
+    </div>
+
+    <!-- Grid -->
+    <div class="differentials-grid">
+      <div 
+        class="differential-item" 
+        *ngFor="let item of differentials; let i = index" 
+        [style.animation-delay.s]="0.3 + i * 0.1"
+      >
+        <div class="icon-container">
+          <ng-container [ngSwitch]="item.icon">
+            <svg *ngSwitchCase="'heart'" class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+            </svg>
+            <svg *ngSwitchCase="'sparkles'" class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+              <path d="M5 3v4"></path>
+              <path d="M19 17v4"></path>
+              <path d="M3 5h4"></path>
+              <path d="M17 19h4"></path>
+            </svg>
+            <svg *ngSwitchCase="'award'" class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="8" r="6"></circle>
+              <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+            </svg>
+            <svg *ngSwitchCase="'clock'" class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"></circle>
+              <polyline points="12 6 12 12 16 14"></polyline>
+            </svg>
+          </ng-container>
+        </div>
+        
+        <h3 class="item-title">
+          {{ item.title }}
+        </h3>
+        
+        <p class="item-description">
+          {{ item.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
