@@ -1,0 +1,187 @@
+.services-section {
+  padding: 6rem 0;
+  background-color: hsl(var(--background));
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  @media (min-width: 768px) {
+    padding: 0 3rem;
+  }
+}
+
+// Header
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.badge {
+  display: inline-block;
+  background-color: hsl(var(--secondary) / 0.2);
+  color: hsl(var(--primary));
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.1s forwards;
+}
+
+.title {
+  font-size: 2.25rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.2s forwards;
+
+  @media (min-width: 768px) {
+    font-size: 3rem;
+  }
+}
+
+.highlight {
+  color: hsl(var(--primary));
+}
+
+.subtitle {
+  color: hsl(var(--muted-foreground));
+  font-size: 1.125rem;
+  max-width: 42rem;
+  margin: 0 auto;
+  line-height: 1.75;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.3s forwards;
+}
+
+// Services Grid
+.services-grid {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.card-content {
+  background-color: hsl(var(--card));
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  border: 1px solid hsl(var(--border));
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    border-color: hsl(var(--secondary));
+    transform: translateY(-4px);
+  }
+}
+
+.icon-wrapper {
+  background-color: hsl(var(--secondary) / 0.2);
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+
+  .card-content:hover & {
+    background-color: hsl(var(--secondary) / 0.3);
+    transform: scale(1.1) rotate(5deg);
+  }
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+  color: hsl(var(--primary));
+}
+
+.service-title {
+  font-size: 1.25rem;
+  color: hsl(var(--foreground));
+  margin-bottom: 0.75rem;
+  transition: color 0.3s ease;
+
+  .card-content:hover & {
+    color: hsl(var(--primary));
+  }
+}
+
+.service-description {
+  color: hsl(var(--muted-foreground));
+  line-height: 1.75;
+  margin: 0;
+}
+
+// CTA Section
+.cta-section {
+  text-align: center;
+  margin-top: 3rem;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.8s forwards;
+}
+
+.cta-text {
+  color: hsl(var(--muted-foreground));
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  background-color: hsl(var(--primary));
+  color: hsl(var(--primary-foreground));
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: hsl(var(--primary) / 0.9);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Animations
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

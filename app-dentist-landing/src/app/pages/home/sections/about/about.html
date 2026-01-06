@@ -1,0 +1,84 @@
+<section id="sobre" class="about-section">
+  <div class="container">
+    <div class="grid">
+      <!-- Image -->
+      <div class="image-container" #imageContainer>
+        <div class="image-wrapper">
+          <img
+            src="https://images.unsplash.com/photo-1764004450351-37fb72cb8e8c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZW50YWwlMjBjbGluaWMlMjBtb2Rlcm58ZW58MXx8fHwxNzY3Njc0NjUwfDA&ixlib=rb-4.1.0&q=80&w=1080"
+            alt="Consultório Moderno"
+            class="clinic-image"
+          />
+          <div class="image-overlay"></div>
+        </div>
+
+        <!-- Stats Cards -->
+        <div class="stats-card" #statsCard>
+          <div class="stat-item" *ngFor="let stat of stats">
+            <ng-container [ngSwitch]="stat.icon">
+              <svg *ngSwitchCase="'award'" class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="8" r="6"></circle>
+                <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+              </svg>
+              <svg *ngSwitchCase="'users'" class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M22 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+              <svg *ngSwitchCase="'heart'" class="stat-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
+              </svg>
+            </ng-container>
+            <p class="stat-value">{{ stat.value }}</p>
+            <p class="stat-label">{{ stat.label }}</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="content-container" #contentContainer>
+        <div class="badge">
+          Sobre a Dra. Carolini
+        </div>
+
+        <h2 class="title">
+          Cuidando de sorrisos com <span class="highlight">dedicação e carinho</span>
+        </h2>
+
+        <p class="description">
+          Formada em Odontologia pela Universidade de São Paulo, com especialização em Odontologia Estética e mais de 10 anos de experiência, a Dra. Carolini Coutinho Chaves dedica-se a proporcionar não apenas tratamentos dentários de excelência, mas também uma experiência acolhedora e humanizada.
+        </p>
+
+        <p class="description">
+          Acredito que cada sorriso é único e merece um cuidado personalizado. Utilizo as mais modernas técnicas e tecnologias para garantir resultados naturais e duradouros, sempre priorizando o conforto e bem-estar dos meus pacientes.
+        </p>
+
+        <div class="credentials">
+          <div class="credentials-grid">
+            <div class="credentials-column">
+              <div class="credential-item">
+                <div class="credential-dot"></div>
+                <span>Graduação USP</span>
+              </div>
+              <div class="credential-item">
+                <div class="credential-dot"></div>
+                <span>Odontologia Estética</span>
+              </div>
+            </div>
+            <div class="credentials-column">
+              <div class="credential-item">
+                <div class="credential-dot"></div>
+                <span>Implantodontia</span>
+              </div>
+              <div class="credential-item">
+                <div class="credential-dot"></div>
+                <span>Harmonização Facial</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
