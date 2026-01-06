@@ -1,0 +1,67 @@
+<section id="depoimentos" class="testimonials-section">
+  <div class="container">
+    <!-- Header -->
+    <div class="header">
+      <div class="badge">
+        Depoimentos
+      </div>
+      
+      <h2 class="title">
+        O que nossos <span class="highlight">pacientes dizem</span>
+      </h2>
+      
+      <p class="subtitle">
+        A satisfação dos nossos pacientes é nossa maior conquista
+      </p>
+    </div>
+
+    <!-- Testimonials Grid -->
+    <div class="testimonials-grid">
+      <div 
+        class="testimonial-card" 
+        *ngFor="let testimonial of testimonials; let i = index"
+        [style.animation-delay.s]="0.4 + i * 0.1"
+      >
+        <div class="card-content">
+          <!-- Quote Icon -->
+          <div class="quote-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M16 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
+              <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z"></path>
+            </svg>
+          </div>
+
+          <!-- Stars -->
+          <div class="stars">
+            <svg 
+              *ngFor="let star of getStars(testimonial.rating)" 
+              class="star-icon" 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="20" 
+              height="20" 
+              viewBox="0 0 24 24" 
+              fill="currentColor" 
+              stroke="currentColor" 
+              stroke-width="2" 
+              stroke-linecap="round" 
+              stroke-linejoin="round"
+            >
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+          </div>
+
+          <!-- Text -->
+          <p class="testimonial-text">
+            "{{ testimonial.text }}"
+          </p>
+
+          <!-- Author -->
+          <div class="author-info">
+            <p class="author-name">{{ testimonial.name }}</p>
+            <p class="author-treatment">{{ testimonial.treatment }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,75 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Logo and Description -->
+      <div class="footer-section">
+        <img 
+          *ngIf="logoImage" 
+          [src]="logoImage" 
+          alt="Carolini Coutinho Chaves" 
+          class="footer-logo"
+        />
+        <p class="footer-description">
+          Cuidando do seu sorriso com carinho, tecnologia e profissionalismo.
+        </p>
+      </div>
+      
+      <!-- Quick Links -->
+      <div class="footer-section">
+        <h3 class="footer-title">Links Rápidos</h3>
+        <ul class="footer-links">
+          <li><a href="#sobre" class="footer-link">Sobre</a></li>
+          <li><a href="#tratamentos" class="footer-link">Tratamentos</a></li>
+          <li><a href="#depoimentos" class="footer-link">Depoimentos</a></li>
+          <li><a href="#contato" class="footer-link">Contato</a></li>
+        </ul>
+      </div>
+      
+      <!-- Social and CTA -->
+      <div class="footer-section">
+        <h3 class="footer-title">Conecte-se</h3>
+        
+        <div class="social-links">
+          <button 
+            (click)="onSocialClick('instagram')"
+            class="social-button"
+            aria-label="Instagram"
+          >
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+            </svg>
+          </button>
+          
+          <button 
+            (click)="onSocialClick('facebook')"
+            class="social-button"
+            aria-label="Facebook"
+          >
+            <svg class="social-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </button>
+        </div>
+        
+        <button 
+          (click)="onWhatsAppClick()"
+          class="whatsapp-button"
+        >
+          <svg class="button-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+          </svg>
+          Agendar pelo WhatsApp
+        </button>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p class="copyright">
+        &copy; {{ currentYear }} Carolini Coutinho Chaves - Cirurgiã-Dentista. Todos os direitos reservados.
+      </p>
+    </div>
+  </div>
+</footer>
