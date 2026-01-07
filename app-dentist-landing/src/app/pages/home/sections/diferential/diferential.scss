@@ -1,6 +1,24 @@
+$color-primary: #5c4033;
+$color-primary-foreground: #ffffff;
+$color-secondary: #e6cec5;
+$color-background: #fdf3f1;
+$color-foreground: #5c4033;
+$color-muted: #fdf3f1;
+$color-muted-foreground: #8e8279;
+$color-card: #ffffff;
+$color-card-foreground: #5c4033;
+$color-border: #e6cec5;
+$brown-dark: #4d362b;
+$brown-light: #775050;
+$background-section: #faf8f6;
+
+$font-title: 'Playfair Display', serif;
+$font-body: 'Montserrat', sans-serif;
+
+
 .differentials-section {
   padding: 6rem 0;
-  background-color: hsl(var(--muted) / 0.3);
+  background-color: #F7F4F4;
 }
 
 .container {
@@ -24,20 +42,22 @@
 
 .badge {
   display: inline-block;
-  background-color: hsl(var(--secondary) / 0.2);
-  color: hsl(var(--primary));
-  padding: 0.5rem 1rem;
+  width: fit-content;
+  background-color: #f1e4e0;
+  color: #a67c6d;
+  padding: 0.5rem 1.25rem;
   border-radius: 9999px;
   font-size: 0.875rem;
-  margin-bottom: 1rem;
+  font-weight: 500;
+  font-family: $font-body;
   opacity: 0;
   transform: translateY(20px);
-  animation: fadeInUp 0.6s ease-out 0.1s forwards;
+  animation: fadeInUp 0.6s ease-out 0.5s forwards;
 }
-
 .title {
   font-size: 2.25rem;
-  color: hsl(var(--foreground));
+  color: $brown-dark;
+  font-family: $font-body;
   margin-bottom: 1rem;
   line-height: 1.2;
   opacity: 0;
@@ -50,7 +70,7 @@
 }
 
 .highlight {
-  color: hsl(var(--primary));
+  color: $brown-light;
 }
 
 // Grid
@@ -75,7 +95,8 @@
 }
 
 .icon-container {
-  background: linear-gradient(135deg, hsl(var(--secondary) / 0.3), hsl(var(--primary) / 0.2));
+  background-color: #fce8e8;
+  color: $color-card-foreground;
   width: 5rem;
   height: 5rem;
   border-radius: 1rem;
@@ -99,12 +120,14 @@
 
 .item-title {
   font-size: 1.25rem;
-  color: hsl(var(--foreground));
+  font-family: $font-body;
+  color: $brown-dark;
   margin-bottom: 0.75rem;
 }
 
 .item-description {
-  color: hsl(var(--muted-foreground));
+  color: $brown-light;
+  font-family: $font-body; 
   line-height: 1.75;
   margin: 0;
 }
