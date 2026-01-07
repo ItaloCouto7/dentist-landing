@@ -1,7 +1,24 @@
+$color-primary: #5c4033;
+$color-primary-foreground: #ffffff;
+$color-secondary: #e6cec5;
+$color-background: #fdf3f1;
+$color-foreground: #5c4033;
+$color-muted: #fdf3f1;
+$color-muted-foreground: #8e8279;
+$color-card: #ffffff;
+$color-card-foreground: #5c4033;
+$color-border: #e6cec5;
+$brown-dark: #4D362B;
+$brown-light:#775050;
+$background-section: #FAF8F6;
+
+
+$font-title: 'Playfair Display', serif;
+$font-body: 'Montserrat', sans-serif;
+
 .whatsapp-cta {
   padding: 6rem 0;
-  background: linear-gradient(to bottom right, var(--primary, #007bff), rgba(var(--primary-rgb, 0, 123, 255), 0.95), var(--secondary, #6c757d));
-  position: relative;
+background: radial-gradient(circle at 70% 30%, #D4A5A5 0%, #5D4037 80%);  position: relative;
   overflow: hidden;
 }
 
@@ -60,11 +77,13 @@
   font-size: 0.875rem;
   margin-bottom: 1.5rem;
   backdrop-filter: blur(4px);
+  font-family: $font-body;
 }
 
 // Title
 .title {
   font-size: 2.25rem;
+  font-family: $font-body;
   color: var(--primary-foreground, #ffffff);
   margin-bottom: 1.5rem;
   line-height: 1.2;
@@ -87,6 +106,7 @@
   max-width: 42rem;
   margin-left: auto;
   margin-right: auto;
+  font-family: $font-body;
 }
 
 // Features
@@ -96,6 +116,7 @@
   justify-content: center;
   gap: 2rem;
   margin-bottom: 2.5rem;
+  font-family: $font-body;
 }
 
 .feature-item {
@@ -108,6 +129,7 @@
 .feature-icon {
   background: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.2);
   padding: 0.75rem;
+  display: flex;
   border-radius: 0.75rem;
   backdrop-filter: blur(4px);
 
@@ -126,10 +148,12 @@
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
+  font-family: $font-body;
   background: var(--primary-foreground, #ffffff);
-  color: var(--primary, #007bff);
+  color: $brown-dark;
   padding: 1.25rem 2.5rem;
-  border-radius: 9999px;
+  border-radius: 99999px;
+  font-weight: 500;
   font-size: 1.125rem;
   border: none;
   cursor: pointer;
@@ -159,6 +183,7 @@
 // Trust Badge
 .trust-badge {
   color: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.7);
+  font-family: $font-body;
   font-size: 0.875rem;
   margin: 0;
 }

@@ -1,6 +1,24 @@
+$color-primary: #5c4033;
+$color-primary-foreground: #ffffff;
+$color-secondary: #e6cec5;
+$color-background: #fdf3f1;
+$color-foreground: #5c4033;
+$color-muted: #fdf3f1;
+$color-muted-foreground: #8e8279;
+$color-card: #ffffff;
+$color-card-foreground: #5c4033;
+$color-border: #e6cec5;
+$brown-dark: #4D362B;
+$brown-light:#775050;
+$background-section: #FAF8F6;
+
+
+$font-title: 'Playfair Display', serif;
+$font-body: 'Montserrat', sans-serif;
+
 .before-after {
   padding: 6rem 0;
-  background: var(--background, #ffffff);
+  background: $background-section;
 }
 
 .container {
@@ -21,33 +39,39 @@
 
 .badge {
   display: inline-block;
-  background: rgba(var(--secondary-rgb, 200, 200, 200), 0.2);
-  color: var(--primary, #007bff);
-  padding: 0.5rem 1rem;
+  width: fit-content;
+  background-color: #f1e4e0;
+  color: #a67c6d;
+  padding: 0.5rem 1.25rem;
   border-radius: 9999px;
   font-size: 0.875rem;
-  margin-bottom: 1rem;
+  font-weight: 500;
+  font-family: $font-body;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.5s forwards;
 }
 
 .title {
   font-size: 2.25rem;
-  color: var(--foreground, #000000);
+  color: $brown-dark;
   margin-bottom: 1rem;
+  font-family: $font-body;
 
   @media (min-width: 768px) {
     font-size: 3rem;
   }
 
   .highlight {
-    color: var(--primary, #007bff);
+    color: $color-primary;
   }
 }
 
 .description {
-  color: var(--muted-foreground, #666666);
+  color:  $brown-light;
   font-size: 1.125rem;
   max-width: 42rem;
   margin: 0 auto;
+  font-family: $font-body;
 }
 
 // Grid
@@ -118,13 +142,15 @@
 
 .label-before {
   left: 1rem;
-  background: rgba(var(--foreground-rgb, 0, 0, 0), 0.8);
+  background: $brown-dark;
+  font-family: $font-body;
   color: var(--background, #ffffff);
 }
 
 .label-after {
   right: 1rem;
-  background: var(--primary, #007bff);
+  background: $color-primary;
+  font-family: $font-body;
   color: var(--primary-foreground, #ffffff);
 }
 
@@ -144,7 +170,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: var(--primary, #007bff);
+  background: $color-primary;
   border-radius: 9999px;
   padding: 0.5rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
@@ -162,7 +188,8 @@
   text-align: center;
 
   p {
-    color: var(--foreground, #000000);
+    color: $brown-dark;
+    font-family: $font-body;
     margin: 0;
   }
 }
@@ -174,7 +201,8 @@
 
   p {
     font-size: 0.875rem;
-    color: var(--muted-foreground, #666666);
+    color: $brown-light;
+    font-family: $font-body;
     font-style: italic;
     margin: 0;
   }
