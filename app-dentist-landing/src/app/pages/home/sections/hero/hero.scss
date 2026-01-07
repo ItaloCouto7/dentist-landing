@@ -9,6 +9,9 @@ $color-card: #ffffff;
 $color-card-foreground: #5c4033;
 $color-border: #e6cec5;
 $brown-dark: #4D362B;
+$brown-light:#775050;
+$background-section: #FAF8F6;
+
 
 $font-title: 'Playfair Display', serif;
 $font-body: 'Montserrat', sans-serif;
@@ -28,7 +31,7 @@ $font-body: 'Montserrat', sans-serif;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: $color-background;
+  background: $background-section;
 }
 
 .decorative-container {
@@ -123,7 +126,7 @@ $font-body: 'Montserrat', sans-serif;
   font-weight: 500;
   margin-top: 1rem;
   margin-bottom: 1rem;
-    white-space: nowrap;
+  white-space: nowrap;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease-out 0.6s forwards;
@@ -134,7 +137,7 @@ $font-body: 'Montserrat', sans-serif;
 }
 
 .title-highlight {
-  color: $color-card-foreground;
+  color: $brown-light;
 }
 
 .description {

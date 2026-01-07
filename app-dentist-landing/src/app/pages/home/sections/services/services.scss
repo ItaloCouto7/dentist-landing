@@ -1,12 +1,28 @@
-// Variáveis de suporte (Caso não estejam no seu global)
+$color-primary: #5c4033;
+$color-primary-foreground: #ffffff;
+$color-secondary: #e6cec5;
+$color-background: #fdf3f1;
+$color-foreground: #5c4033;
+$color-muted: #fdf3f1;
+$color-muted-foreground: #8e8279;
+$color-card: #ffffff;
+$color-card-foreground: #5c4033;
+$color-border: #e6cec5;
+$brown-dark: #4d362b;
+$brown-light: #775050;
+$background-section: #faf8f6;
+
+$font-title: 'Playfair Display', serif;
+$font-body: 'Montserrat', sans-serif;
+
 :host {
   display: block;
   width: 100%;
 }
 
 .services-section {
-  background-color: hsl(var(--background));
-  overflow: hidden; // Evita que animações criem scroll lateral
+  background-color: $background-section;
+  overflow: hidden;
 }
 
 .container {
@@ -25,6 +41,7 @@
 .header {
   text-align: center;
   margin-bottom: 4rem;
+  margin-top: 50px;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease-out forwards;
@@ -35,21 +52,26 @@
 
 .badge {
   display: inline-block;
-  background-color: hsl(var(--secondary) / 0.2);
-  color: hsl(var(--primary));
-  padding: 0.5rem 1rem;
+  width: fit-content;
+  background-color: #f1e4e0;
+  color: #a67c6d;
+  padding: 0.5rem 1.25rem;
   border-radius: 9999px;
   font-size: 0.875rem;
-  margin-bottom: 1.5rem;
-  width: fit-content;
+  font-weight: 500;
+  font-family: $font-body;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease-out 0.5s forwards;
 }
 
 .title {
   font-size: 2.25rem;
-  color: hsl(var(--foreground));
+  color: $brown-dark;
   margin-bottom: 1.25rem;
   line-height: 1.2;
   font-weight: 700;
+  font-family: $font-body;
 
   @media (min-width: 768px) {
     font-size: 3rem;
@@ -57,12 +79,13 @@
 }
 
 .highlight {
-  color: hsl(var(--primary));
+  color: $brown-light;
 }
 
 .subtitle {
-  color: hsl(var(--muted-foreground));
+  color: $brown-light;
   font-size: 1.125rem;
+  font-family: $font-body;
   max-width: 42rem;
   margin: 0 auto;
   line-height: 1.75;
@@ -74,7 +97,7 @@
   gap: 100px;
   margin-bottom: 4rem;
   width: 100%;
-  
+
   // Mobile: 1 coluna bem definida
   grid-template-columns: 1fr;
 
@@ -91,30 +114,33 @@
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.6s ease-out forwards;
-  height: 100%; // Garante que todos os cards no grid tenham o mesmo tamanho
+  height: 100%;
 }
 
 .card-content {
-  background-color: hsl(var(--card));
+  background-color: $color-card;
   padding: 2.5rem 2rem;
   border-radius: 1rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-  height: 100%;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+  height: 80%;
   border: 1px solid hsl(var(--border));
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  font-family: $font-body;
+  color: $brown-dark;
 
   &:hover {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
-    border-color: hsl(var(--secondary));
+    border-color: #d4a5a5;
     transform: translateY(-8px);
   }
 }
 
 .icon-wrapper {
-  background-color: hsl(var(--secondary) / 0.15);
+  background-color: #fce8e8;
+  opacity: 80;
   width: 3.5rem;
   height: 3.5rem;
   border-radius: 0.75rem;
@@ -125,7 +151,7 @@
   transition: all 0.3s ease;
 
   .card-content:hover & {
-    background-color: hsl(var(--secondary) / 0.3);
+    background-color: #fce8e8;
     transform: scale(1.1) rotate(5deg);
   }
 }
@@ -149,7 +175,7 @@
 }
 
 .service-description {
-  color: hsl(var(--muted-foreground));
+  color: $brown-light;
   line-height: 1.6;
   margin: 0;
   font-size: 1rem;
@@ -158,16 +184,16 @@
 // --- CTA Section ---
 .cta-section {
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
   padding: 3rem 1.5rem;
   background-color: hsl(var(--secondary) / 0.05);
   border-radius: 1.5rem;
-  
+
   // Flexbox para evitar sobreposição de texto e botão
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem; 
+  gap: 1.5rem;
 
   opacity: 0;
   transform: translateY(20px);
@@ -175,19 +201,21 @@
 }
 
 .cta-text {
-  color: hsl(var(--muted-foreground));
+  color: $brown-light;
+  font-family: $font-body;
   font-size: 1.125rem;
   margin: 0;
 }
 
 .cta-button {
-  background-color: hsl(var(--primary));
-  color: hsl(var(--primary-foreground));
+  background-color: $color-card-foreground;
+  color: white;
   padding: 1rem 2.5rem;
   border-radius: 9999px;
   border: none;
   font-size: 1rem;
-  font-weight: 600;
+  font-family: $font-body;
+  font-weight: 500;
   cursor: pointer;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
