@@ -19,8 +19,7 @@ export class FooterComponent {
 
   onSocialClick(platform: string): void {
     const urls: { [key: string]: string } = {
-      instagram: 'https://instagram.com',
-      facebook: 'https://facebook.com'
+      instagram: 'https://www.instagram.com/carolinicoutinhoo?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==',
     };
     
     if (urls[platform]) {
