@@ -3,7 +3,11 @@
     <div class="footer-grid">
       <!-- Logo and Description -->
       <div class="footer-section">
-        <img src="assets/images/carolini-logo-remove-bg.png" alt="Carolini Coutinho Chaves" class="footer-logo" />
+        <img
+          src="assets/images/carolini-logo-remove-bg.png"
+          alt="Carolini Coutinho Chaves"
+          class="footer-logo"
+        />
         <p class="footer-description">
           Cuidando do seu sorriso com carinho, tecnologia e profissionalismo.
         </p>
@@ -39,20 +43,35 @@
             </svg>
           </button>
 
-          <button (click)="onSocialClick('facebook')" class="social-button" aria-label="Facebook">
+          <a
+            href="mailto:carolinicchaves@hotmail.com?subject=Agendamento%20de%20Consulta&body=Olá,%20Dra.%20Carolini%20Coutinho.%0AGostaria%20de%20agendar%20um%20atendimento%20odontológico."
+            class="social-button"
+            aria-label="Email"
+          >
             <svg
               class="social-icon"
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
               stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
             >
-              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              <!-- ÍCONE DE EMAIL -->
+              <path
+                d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"
+              />
+              <polyline points="22,6 12,13 2,6" />
             </svg>
-          </button>
+          </a>
         </div>
 
-        <button (click)="onWhatsAppClick()" class="whatsapp-button">
+        <a
+          href="https://wa.me/5581995970362?text=Olá%2C%20Dra.%20Carolini%20Coutinho.%0AGostaria%20de%20agendar%20um%20atendimento%20odontológico.%20Poderia%20me%20passar%20mais%20informações%2C%20por%20favor%3F"
+          target="_blank"
+          rel="noopener"
+          class="whatsapp-button"
+        >
           <svg
             class="button-icon"
             viewBox="0 0 24 24"
@@ -63,7 +82,7 @@
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
           </svg>
           Agendar pelo WhatsApp
-        </button>
+        </a>
       </div>
     </div>
 

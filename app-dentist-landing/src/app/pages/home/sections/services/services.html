@@ -2,45 +2,128 @@
   <div class="container">
     <!-- Header -->
     <div class="header">
-      <div class="badge">
-        Nossos Tratamentos
-      </div>
-      
-      <h2 class="title">
-        Soluções completas para seu <span class="highlight">sorriso</span>
-      </h2>
-      
+      <div class="badge">Nossos Tratamentos</div>
+
+      <h2 class="title">Soluções completas para seu <span class="highlight">sorriso</span></h2>
+
       <p class="subtitle">
-        Oferecemos uma ampla gama de tratamentos personalizados para atender todas as suas necessidades odontológicas
+        Oferecemos uma ampla gama de tratamentos personalizados para atender todas as suas
+        necessidades odontológicas
       </p>
     </div>
 
     <!-- Services Grid -->
     <div class="services-grid">
-      <div class="service-card" *ngFor="let service of services; let i = index" [style.animation-delay.s]="0.4 + i * 0.1">
+      <div
+        class="service-card"
+        *ngFor="let service of services; let i = index"
+        [style.animation-delay.s]="0.4 + i * 0.1"
+      >
         <div class="card-content">
           <div class="icon-wrapper">
             <ng-container [ngSwitch]="service.icon">
-              <svg *ngSwitchCase="'shield'" class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"></path>
+              <svg
+                *ngSwitchCase="'shield'"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"
+                ></path>
               </svg>
-              <svg *ngSwitchCase="'sparkles'" class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"></path>
+              <svg
+                *ngSwitchCase="'sparkles'"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"
+                ></path>
                 <path d="M5 3v4"></path>
                 <path d="M19 17v4"></path>
                 <path d="M3 5h4"></path>
                 <path d="M17 19h4"></path>
               </svg>
-              <svg *ngSwitchCase="'wrench'" class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+              <svg
+                *ngSwitchCase="'wrench'"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"
+                ></path>
               </svg>
-              <svg *ngSwitchCase="'zap'" class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path>
+              <svg
+                *ngSwitchCase="'zap'"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"
+                ></path>
               </svg>
-              <svg *ngSwitchCase="'diamond'" class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41l-7.59-7.59a2.41 2.41 0 0 0-3.41 0Z"></path>
+              <svg
+                *ngSwitchCase="'diamond'"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M2.7 10.3a2.41 2.41 0 0 0 0 3.41l7.59 7.59a2.41 2.41 0 0 0 3.41 0l7.59-7.59a2.41 2.41 0 0 0 0-3.41l-7.59-7.59a2.41 2.41 0 0 0-3.41 0Z"
+                ></path>
               </svg>
-              <svg *ngSwitchCase="'smile'" class="icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <svg
+                *ngSwitchCase="'smile'"
+                class="icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
                 <circle cx="12" cy="12" r="10"></circle>
                 <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
                 <line x1="9" x2="9.01" y1="9" y2="9"></line>
@@ -48,11 +131,11 @@
               </svg>
             </ng-container>
           </div>
-          
+
           <h3 class="service-title">
             {{ service.title }}
           </h3>
-          
+
           <p class="service-description">
             {{ service.description }}
           </p>
@@ -62,12 +145,15 @@
 
     <!-- CTA -->
     <div class="cta-section">
-      <p class="cta-text">
-        Não encontrou o tratamento que procura?
-      </p>
-      <button class="cta-button" (click)="openWhatsApp()">
+      <p class="cta-text">Não encontrou o tratamento que procura?</p>
+      <a
+        href="https://wa.me/5581995970362?text=Olá%2C%20Dra.%20Carolini%20Coutinho.%0AGostaria%20de%20agendar%20um%20atendimento%20odontológico.%20Poderia%20me%20passar%20mais%20informações%2C%20por%20favor%3F"
+        target="_blank"
+        rel="noopener"
+        class="cta-button"
+      >
         Fale Conosco pelo WhatsApp
-      </button>
+      </a>
     </div>
   </div>
 </section>
