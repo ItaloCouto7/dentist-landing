@@ -16,8 +16,8 @@ interface Stat {
 })
 export class AboutComponent {
   stats: Stat[] = [
-    { icon: 'award', label: 'Anos de Experiência', value: '10+' },
-    { icon: 'users', label: 'Pacientes Atendidos', value: '1000+' },
+    { icon: 'award', label: 'Anos de Experiência', value: '2+' },
+    { icon: 'users', label: 'Pacientes Atendidos', value: '100+' },
     { icon: 'heart', label: 'Satisfação', value: '98%' }
   ];
 }

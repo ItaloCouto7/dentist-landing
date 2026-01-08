@@ -29,7 +29,7 @@ export class DifferentialsComponent {
     {
       icon: 'award',
       title: 'Profissional Qualificada',
-      description: 'Mais de 10 anos de experiência e constante atualização profissional.'
+      description: 'Mais de 2 anos de experiência e constante atualização profissional.'
     },
     {
       icon: 'clock',
