@@ -20,7 +20,7 @@ export class BeforeAfterComponent {
     {
       before: '/assets/images/sorriso-before.jpeg',
       after: '/assets/images/sorriso-after.jpeg',
-      treatment: 'Clareamento Dental',
+      treatment: 'Implante Dentário',
       showAfter: false
     },
   ];
