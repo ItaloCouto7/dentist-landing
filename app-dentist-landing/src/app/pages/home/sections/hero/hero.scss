@@ -219,8 +219,11 @@ $font-body: 'Montserrat', sans-serif;
     width: 100%;
     height: 600px;
     object-fit: cover;
+    object-position: center 11%;
+    display: block;
   }
 }
+
 
 .floating-badge {
   position: absolute;

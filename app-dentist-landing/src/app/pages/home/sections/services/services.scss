@@ -222,7 +222,7 @@ $font-body: 'Montserrat', sans-serif;
   width: fit-content;
 
   &:hover {
-    background-color: hsl(var(--primary) / 0.9);
+    background-color: $color-card-foreground;
     box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
   }

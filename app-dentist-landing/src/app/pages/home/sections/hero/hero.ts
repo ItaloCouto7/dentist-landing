@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero.scss']
 })
 export class HeroComponent {
-  logoImage = 'assets/logo.png';
+  logoImage = 'assets/images/carolini-logo-remove-bg.png';
   
   onWhatsAppClick(): void {
   }

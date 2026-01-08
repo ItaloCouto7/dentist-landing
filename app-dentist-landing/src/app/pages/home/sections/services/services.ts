@@ -19,27 +19,27 @@ export class ServicesComponent {
     {
       icon: 'shield',
       title: 'Limpeza e Prevenção',
-      description: 'Higienização profunda, profilaxia e orientações para manter seu sorriso saudável.'
+      description: 'Orientação de higiene personalizada, raspagem gengival, profilaxia e orientações para manter seu sorriso saudável.'
     },
     {
       icon: 'sparkles',
       title: 'Clareamento Dental',
-      description: 'Técnicas modernas para deixar seus dentes mais brancos e brilhantes de forma segura.'
+      description: 'Técnicas combinadas caseiras e de consultórios individualizadas a cada paciente.'
     },
     {
       icon: 'wrench',
-      title: 'Ortodontia',
-      description: 'Aparelhos fixos e móveis para corrigir o alinhamento dos dentes com eficiência.'
-    },
-    {
-      icon: 'zap',
-      title: 'Implantes Dentários',
-      description: 'Reabilitação completa com implantes de alta qualidade e durabilidade.'
+      title: 'Implantes dentários',
+      description: 'Solução moderna e segura devolvendo autoestima e segurança.'
     },
     {
       icon: 'diamond',
-      title: 'Estética Dental',
-      description: 'Lentes de contato, facetas e restaurações estéticas para um sorriso perfeito.'
+      title: 'Atendimento infantil',
+      description: 'Atendimento com carinho, atenção e paciência para os pequenos hérois. Orientando e devolvendo saúde.'
+    },
+    {
+      icon: 'zap',
+      title: 'Atendimento clínico',
+      description: 'Restaurações estéticas e funcionais. Utilizando técnicas modernas e materiais de alta qualidade para garantir durabilidade e conforto. '
     },
     {
       icon: 'smile',
