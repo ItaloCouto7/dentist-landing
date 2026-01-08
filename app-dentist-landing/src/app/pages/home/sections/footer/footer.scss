@@ -1,5 +1,23 @@
+$color-primary: #5c4033;
+$color-primary-foreground: #ffffff;
+$color-secondary: #e6cec5;
+$color-background: #fdf3f1;
+$color-foreground: #5c4033;
+$color-muted: #fdf3f1;
+$color-muted-foreground: #8e8279;
+$color-card: #ffffff;
+$color-card-foreground: #5c4033;
+$color-border: #e6cec5;
+$brown-dark: #4D362B;
+$brown-light:#775050;
+$background-section: #FAF8F6;
+
+
+$font-title: 'Playfair Display', serif;
+$font-body: 'Montserrat', sans-serif;
+
 .footer {
-  background: var(--primary, #007bff);
+  background: $color-card-foreground;
   color: var(--primary-foreground, #ffffff);
   padding: 4rem 0;
 }
@@ -32,14 +50,18 @@
 
 // Logo Section
 .footer-logo {
-  height: 4rem;
+  width: 180px;          // tamanho amigável para footer
+  max-width: 100%;
+  height: auto;          // mantém proporção
   margin-bottom: 1rem;
   filter: brightness(0) invert(1);
   opacity: 0.9;
 }
 
+
 .footer-description {
   color: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.8);
+  font-family: $font-body;
   font-size: 0.875rem;
   line-height: 1.6;
   margin: 0;
@@ -48,6 +70,7 @@
 // Links Section
 .footer-title {
   color: var(--primary-foreground, #ffffff);
+  font-family: $font-body;
   margin-bottom: 1rem;
   font-size: 1.125rem;
   font-weight: 600;
@@ -55,6 +78,7 @@
 
 .footer-links {
   list-style: none;
+  font-family: $font-body;
   padding: 0;
   margin: 0;
   display: flex;
@@ -103,10 +127,11 @@
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: var(--secondary, #28a745);
+  background: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.1);
   color: var(--secondary-foreground, #ffffff);
   padding: 0.75rem 1.5rem;
   border-radius: 9999px;
+  font-family: $font-body;
   border: none;
   cursor: pointer;
   font-size: 0.875rem;
@@ -114,7 +139,7 @@
   transition: all 0.3s ease;
 
   &:hover {
-    background: rgba(var(--secondary-rgb, 40, 167, 69), 0.9);
+    background: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.2);
   }
 
   .button-icon {
@@ -133,5 +158,6 @@
 .copyright {
   color: rgba(var(--primary-foreground-rgb, 255, 255, 255), 0.6);
   font-size: 0.875rem;
+  font-family: $font-body;
   margin: 0;
 }
