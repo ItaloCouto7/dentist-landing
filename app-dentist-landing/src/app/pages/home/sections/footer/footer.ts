@@ -9,7 +9,6 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./footer.scss']
 })
 export class FooterComponent {
-  @Input() logoImage: string = '';
   @Output() whatsAppClick = new EventEmitter<void>();
 
   currentYear = new Date().getFullYear();
