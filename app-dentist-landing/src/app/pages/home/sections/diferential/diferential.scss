@@ -15,16 +15,27 @@ $background-section: #faf8f6;
 $font-title: 'Playfair Display', serif;
 $font-body: 'Montserrat', sans-serif;
 
-
 .differentials-section {
-  padding: 6rem 0;
+  padding: 3rem 0;
   background-color: #F7F4F4;
+
+  @media (min-width: 640px) {
+    padding: 4.5rem 0;
+  }
+
+  @media (min-width: 768px) {
+    padding: 6rem 0;
+  }
 }
 
 .container {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 1.25rem;
+
+  @media (min-width: 640px) {
+    padding: 0 2rem;
+  }
 
   @media (min-width: 768px) {
     padding: 0 3rem;
@@ -34,10 +45,18 @@ $font-body: 'Montserrat', sans-serif;
 // Header
 .header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2.5rem;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease-out forwards;
+
+  @media (min-width: 640px) {
+    margin-bottom: 3rem;
+  }
+
+  @media (min-width: 768px) {
+    margin-bottom: 4rem;
+  }
 }
 
 .badge {
@@ -45,17 +64,23 @@ $font-body: 'Montserrat', sans-serif;
   width: fit-content;
   background-color: #f1e4e0;
   color: #a67c6d;
-  padding: 0.5rem 1.25rem;
+  padding: 0.4rem 1rem;
   border-radius: 9999px;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
   font-family: $font-body;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease-out 0.5s forwards;
+
+  @media (min-width: 640px) {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+  }
 }
+
 .title {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   color: $brown-dark;
   font-family: $font-body;
   margin-bottom: 1rem;
@@ -64,22 +89,56 @@ $font-body: 'Montserrat', sans-serif;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease-out 0.2s forwards;
 
+  @media (min-width: 480px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 640px) {
+    font-size: 2.25rem;
+  }
+
   @media (min-width: 768px) {
     font-size: 3rem;
   }
 }
 
 .highlight {
-  color: $color-primary
+  color: $color-primary;
 }
 
-// Grid
+// Grid / Carousel
 .differentials-grid {
-  display: grid;
-  gap: 2rem;
+  width: 100%;
 
+  // Mobile: Carousel com scroll horizontal
+  @media (max-width: 767px) {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 1.25rem;
+    padding: 0.5rem 0 2rem;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
+    // Esconde scrollbar
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  // Desktop: Grid normal (mantém original)
   @media (min-width: 768px) {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 
   @media (min-width: 1024px) {
@@ -92,20 +151,48 @@ $font-body: 'Montserrat', sans-serif;
   opacity: 0;
   transform: translateY(30px) scale(0.9);
   animation: scaleInUp 0.6s ease-out forwards;
+
+  // Mobile: Cards fixos no carousel
+  @media (max-width: 767px) {
+    min-width: 260px;
+    max-width: 260px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+
+    &:last-child {
+      margin-right: 1.25rem;
+    }
+  }
+
+  @media (min-width: 480px) and (max-width: 767px) {
+    min-width: 280px;
+    max-width: 280px;
+  }
 }
 
 .icon-container {
   background-color: #fce8e8;
   color: $color-card-foreground;
-  width: 5rem;
-  height: 5rem;
+  width: 4rem;
+  height: 4rem;
   border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1.25rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   transition: all 0.5s ease;
+
+  @media (min-width: 640px) {
+    width: 4.5rem;
+    height: 4.5rem;
+  }
+
+  @media (min-width: 768px) {
+    width: 5rem;
+    height: 5rem;
+    margin-bottom: 1.5rem;
+  }
 
   .differential-item:hover & {
     transform: scale(1.1) rotate(360deg);
@@ -113,23 +200,54 @@ $font-body: 'Montserrat', sans-serif;
 }
 
 .icon {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2rem;
+  height: 2rem;
   color: hsl(var(--primary));
+
+  @media (min-width: 640px) {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+
+  @media (min-width: 768px) {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
 }
 
 .item-title {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-family: $font-body;
   color: $brown-dark;
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.625rem;
+  font-weight: 600;
+
+  @media (min-width: 640px) {
+    font-size: 1.15rem;
+    margin-bottom: 0.75rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.25rem;
+  }
 }
 
 .item-description {
   color: $brown-light;
-  font-family: $font-body; 
-  line-height: 1.75;
+  font-family: $font-body;
+  line-height: 1.6;
   margin: 0;
+  font-size: 0.9rem;
+
+  @media (min-width: 640px) {
+    font-size: 0.95rem;
+    line-height: 1.65;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
 }
 
 // Animations

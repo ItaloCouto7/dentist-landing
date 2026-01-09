@@ -263,3 +263,131 @@ $font-body: 'Montserrat', sans-serif;
   flex-shrink: 0;
   margin-top: 0.25rem;
 }
+
+/* ===============================
+   MOBILE RESPONSIVE — LOCATION
+================================ */
+
+@media (max-width: 767px) {
+  .location {
+    padding: 4rem 0;
+  }
+
+  .header {
+    margin-bottom: 2.5rem;
+    padding: 0 0.75rem;
+  }
+
+  .title {
+    font-size: 1.75rem;
+    line-height: 1.25;
+    margin-bottom: 0.75rem;
+  }
+
+  .description {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 0 0.75rem;
+  }
+
+  .content-grid {
+    gap: 2rem;
+    padding: 0 0.75rem;
+  }
+
+  /* Contact cards */
+  .contact-cards {
+    gap: 1.25rem;
+  }
+
+  .contact-card {
+    padding: 1.25rem;
+  }
+
+  .card-content {
+    gap: 0.75rem;
+  }
+
+  .icon-wrapper {
+    padding: 0.75rem;
+
+    .icon {
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+  }
+
+  .card-title {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .card-info {
+    font-size: 0.9rem;
+  }
+
+  .card-subinfo {
+    font-size: 0.8rem;
+  }
+
+  /* Service card */
+  .service-header {
+    padding: 1.5rem;
+    gap: 0.75rem;
+  }
+
+  .service-icon {
+    padding: 0.75rem;
+
+    .icon {
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+
+  .service-title {
+    font-size: 1.25rem;
+  }
+
+  .service-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .service-description {
+    padding: 1.5rem;
+
+    p {
+      font-size: 0.9rem;
+      line-height: 1.55;
+    }
+  }
+
+  .service-benefits {
+    padding: 1.5rem;
+    gap: 0.75rem;
+  }
+
+  .benefit-item {
+    font-size: 0.9rem;
+    gap: 0.6rem;
+  }
+
+  .benefit-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .service-cta {
+    padding: 1.5rem;
+  }
+
+  .cta-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+
+  .cta-icon {
+    width: 1rem;
+    height: 1rem;
+  }
+}
