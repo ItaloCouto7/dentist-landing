@@ -6,6 +6,18 @@ html {
   scroll-behavior: smooth;
 }
 
+.reveal-item {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal-item.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
 .floating-logo {
   position: fixed;
   bottom: 1rem;

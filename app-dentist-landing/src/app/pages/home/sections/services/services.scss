@@ -40,14 +40,19 @@ $font-body: 'Montserrat', sans-serif;
 // --- Header ---
 .header {
   text-align: center;
-  margin-bottom: 4rem;
-  margin-top: 50px;
+  margin-bottom: 3rem;
+  margin-top: 2.5rem;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.8s ease-out forwards;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 768px) {
+    margin-bottom: 4rem;
+    margin-top: 50px;
+  }
 }
 
 .badge {
@@ -55,23 +60,37 @@ $font-body: 'Montserrat', sans-serif;
   width: fit-content;
   background-color: #f1e4e0;
   color: #a67c6d;
-  padding: 0.5rem 1.25rem;
+  padding: 0.4rem 1rem;
   border-radius: 9999px;
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
   font-family: $font-body;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease-out 0.5s forwards;
+
+  @media (min-width: 640px) {
+    padding: 0.5rem 1.25rem;
+    font-size: 0.875rem;
+  }
 }
 
 .title {
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   color: $brown-dark;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
   line-height: 1.2;
   font-weight: 700;
   font-family: $font-body;
+
+  @media (min-width: 480px) {
+    font-size: 2rem;
+  }
+
+  @media (min-width: 640px) {
+    font-size: 2.25rem;
+    margin-bottom: 1.25rem;
+  }
 
   @media (min-width: 768px) {
     font-size: 3rem;
@@ -84,25 +103,58 @@ $font-body: 'Montserrat', sans-serif;
 
 .subtitle {
   color: $brown-light;
-  font-size: 1.125rem;
+  font-size: 0.95rem;
   font-family: $font-body;
   max-width: 42rem;
   margin: 0 auto;
-  line-height: 1.75;
-}
+  line-height: 1.65;
 
-// --- Services Grid ---
-.services-grid {
-  display: grid;
-  gap: 100px;
-  margin-bottom: 4rem;
-  width: 100%;
-
-  // Mobile: 1 coluna bem definida
-  grid-template-columns: 1fr;
+  @media (min-width: 640px) {
+    font-size: 1.05rem;
+    line-height: 1.7;
+  }
 
   @media (min-width: 768px) {
+    font-size: 1.125rem;
+    line-height: 1.75;
+  }
+}
+
+// --- Services Grid / Carousel ---
+.services-grid {
+  margin-bottom: 3rem;
+  width: 100%;
+
+  // Mobile: Carousel com scroll horizontal
+  @media (max-width: 767px) {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 1.25rem;
+    padding: 0.5rem 0 2rem;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
+    // Esconde scrollbar mas mantém funcionalidade
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  // Desktop: Grid normal (mantém tudo original)
+  @media (min-width: 768px) {
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
+    gap: 100px;
+    margin-bottom: 4rem;
   }
 
   @media (min-width: 1024px) {
@@ -114,15 +166,37 @@ $font-body: 'Montserrat', sans-serif;
   opacity: 0;
   transform: translateY(30px);
   animation: fadeInUp 0.6s ease-out forwards;
-  height: 100%;
+
+  // Mobile: Cards fixos no carousel com altura uniforme
+  @media (max-width: 767px) {
+    min-width: 280px;
+    max-width: 280px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+      margin-right: 1.25rem;
+    }
+  }
+
+  @media (min-width: 480px) and (max-width: 767px) {
+    min-width: 320px;
+    max-width: 320px;
+  }
+
+  // Desktop: mantém altura 100%
+  @media (min-width: 768px) {
+    height: 100%;
+  }
 }
 
 .card-content {
   background-color: $color-card;
-  padding: 2.5rem 2rem;
+  padding: 2rem 1.75rem;
   border-radius: 1rem;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
-  height: 80%;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.06), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
   border: 1px solid hsl(var(--border));
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   display: flex;
@@ -131,24 +205,50 @@ $font-body: 'Montserrat', sans-serif;
   font-family: $font-body;
   color: $brown-dark;
 
+  // Mobile: altura fixa para uniformidade
+  @media (max-width: 767px) {
+    height: 100%;
+    min-height: 280px;
+  }
+
+  // Desktop: volta ao comportamento original
+  @media (min-width: 768px) {
+    padding: 2.5rem 2rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.08), 0 10px 10px -5px rgba(0, 0, 0, 0.03);
+    height: 80%;
+  }
+
   &:hover {
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
     border-color: #d4a5a5;
     transform: translateY(-8px);
   }
+
+  @media (max-width: 767px) {
+    &:active {
+      transform: translateY(-4px);
+    }
+  }
 }
 
 .icon-wrapper {
   background-color: #fce8e8;
-  opacity: 80;
-  width: 3.5rem;
-  height: 3.5rem;
+  opacity: 0.8;
+  width: 3rem;
+  height: 3rem;
   border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.25rem;
   transition: all 0.3s ease;
+  flex-shrink: 0;
+
+  @media (min-width: 768px) {
+    width: 3.5rem;
+    height: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
 
   .card-content:hover & {
     background-color: #fce8e8;
@@ -157,17 +257,31 @@ $font-body: 'Montserrat', sans-serif;
 }
 
 .icon {
-  width: 1.75rem;
-  height: 1.75rem;
+  width: 1.5rem;
+  height: 1.5rem;
   color: $color-card-foreground;
+
+  @media (min-width: 768px) {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
 }
 
 .service-title {
-  font-size: 1.35rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: hsl(var(--foreground));
-  margin-bottom: 1rem;
+  margin-bottom: 0.875rem;
   transition: color 0.3s ease;
+
+  @media (min-width: 640px) {
+    font-size: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+  }
 
   .card-content:hover & {
     color: hsl(var(--primary));
@@ -178,49 +292,81 @@ $font-body: 'Montserrat', sans-serif;
   color: $brown-light;
   line-height: 1.6;
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
+
+  @media (min-width: 640px) {
+    font-size: 0.95rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 // --- CTA Section ---
 .cta-section {
   text-align: center;
   margin-top: 0.5rem;
-  padding: 3rem 1.5rem;
   background-color: hsl(var(--secondary) / 0.05);
-  border-radius: 1.5rem;
-
-  // Flexbox para evitar sobreposição de texto e botão
+  border-radius: 1.25rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
-
+  gap: 1.25rem;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease-out 0.8s forwards;
+
+  @media (min-width: 640px) {
+    padding: 2.5rem 2rem;
+    gap: 1.5rem;
+  }
+
+  @media (min-width: 768px) {
+    padding: 3rem 1.5rem;
+    border-radius: 1.5rem;
+  }
 }
 
 .cta-text {
   color: $brown-light;
   font-family: $font-body;
-  font-size: 1.125rem;
+  font-size: 1rem;
   margin: 0;
+
+  @media (min-width: 640px) {
+    font-size: 1.05rem;
+  }
+
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+  }
 }
 
 .cta-button {
   background-color: $color-card-foreground;
   text-decoration: none;
   color: white;
-  padding: 1rem 2.5rem;
+  padding: 0.95rem 2rem;
   border-radius: 9999px;
   border: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
   font-family: $font-body;
   font-weight: 500;
   cursor: pointer;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  width: fit-content;
+  width: 100%;
+  max-width: 320px;
+  display: inline-block;
+  -webkit-tap-highlight-color: transparent;
+
+  @media (min-width: 480px) {
+    width: auto;
+    max-width: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+  }
 
   &:hover {
     background-color: $color-card-foreground;

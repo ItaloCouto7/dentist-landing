@@ -56,7 +56,7 @@ $font-body: 'Montserrat', sans-serif;
 }
 
 .title {
-  font-size: 2.25rem;
+  font-size: 1.75rem; // MOBILE
   color: $brown-dark;
   font-family: $font-body;
   margin-bottom: 1rem;
@@ -66,9 +66,10 @@ $font-body: 'Montserrat', sans-serif;
   animation: fadeInUp 0.6s ease-out 0.2s forwards;
 
   @media (min-width: 768px) {
-    font-size: 3rem;
+    font-size: 2.25rem; // DESKTOP
   }
 }
+
 
 .highlight {
   color: $color-primary;
@@ -78,14 +79,20 @@ $font-body: 'Montserrat', sans-serif;
 .subtitle {
   color: $brown-light;
   font-family: $font-body;
-  font-size: 1.125rem;
+  font-size: 0.95rem; // MOBILE
   max-width: 42rem;
   margin: 0 auto;
-  line-height: 1.75;
+  line-height: 1.65;
   opacity: 0;
   transform: translateY(20px);
   animation: fadeInUp 0.6s ease-out 0.3s forwards;
+
+  @media (min-width: 768px) {
+    font-size: 1.125rem; // DESKTOP
+    line-height: 1.75;
+  }
 }
+
 
 // Testimonials Grid
 .testimonials-grid {
@@ -201,5 +208,88 @@ $font-body: 'Montserrat', sans-serif;
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
+  }
+}
+
+/* ===============================
+   MOBILE CAROUSEL — TESTIMONIALS
+   Segue o mesmo padrão do Services
+================================ */
+
+@media (max-width: 767px) {
+  .testimonials-section {
+    overflow: hidden;
+  }
+
+  .testimonials-grid {
+    display: flex;
+    gap: 1.25rem;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 1.25rem;
+    padding: 0.5rem 0 2rem;
+    margin-left: -1.25rem;
+    margin-right: -1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+
+    /* Esconde scrollbar mantendo funcional */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+
+  .testimonial-card {
+    min-width: 280px;
+    max-width: 280px;
+    scroll-snap-align: start;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+
+    &:last-child {
+      margin-right: 1.25rem;
+    }
+  }
+
+  @media (min-width: 480px) {
+    .testimonial-card {
+      min-width: 320px;
+      max-width: 320px;
+    }
+  }
+
+  .card-content {
+    height: 100%;
+    min-height: 320px;
+    padding: 1.75rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .testimonial-text {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+
+  .author-info {
+    margin-top: 1rem;
+  }
+
+  .stars {
+    margin-bottom: 0.75rem;
+  }
+
+  .quote-icon {
+    top: 0.75rem;
+    right: 0.75rem;
+    width: 2rem;
+    height: 2rem;
   }
 }
