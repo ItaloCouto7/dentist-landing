@@ -111,7 +111,7 @@ background: radial-gradient(circle at 70% 30%, #D4A5A5 0%, #5D4037 80%);  positi
 
 // Features
 .features {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
   justify-content: center;
   gap: 2rem;
@@ -204,7 +204,7 @@ background: radial-gradient(circle at 70% 30%, #D4A5A5 0%, #5D4037 80%);  positi
   }
 
   .badge {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
     padding: 0.4rem 0.9rem;
     margin-bottom: 1.25rem;
   }
