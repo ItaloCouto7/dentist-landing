@@ -31,8 +31,8 @@ export class TestimonialsComponent {
     },
     {
       name: 'Ana Paula',
-      treatment: 'Lentes de Contato',
-      text: 'Meu sorriso mudou completamente! As lentes ficaram naturais e lindas. A Dra. Carolini é uma artista e super atenciosa. Estou muito feliz!',
+      treatment: 'Clareamento Dental',
+      text: 'Fiz clareamento e o resultado superou minhas expectativas. Meu sorriso ficou renovado e muito mais bonito. Atendimento impecável da Dra. Carolini!',
       rating: 5
     },
     {
@@ -43,8 +43,8 @@ export class TestimonialsComponent {
     },
     {
       name: 'Juliana Costa',
-      treatment: 'Harmonização Facial',
-      text: 'A harmonização facial que fiz com a Dra. Carolini ficou maravilhosa! Resultado natural e super satisfatório. Ela entende muito do que faz!',
+      treatment: 'Implante Dentário',
+      text: 'Recuperei meu sorriso e minha confiança! O implante ficou perfeito, muito natural e confortável. A Dra. Carolini me passou muita segurança do começo ao fim.',
       rating: 5
     },
     {
