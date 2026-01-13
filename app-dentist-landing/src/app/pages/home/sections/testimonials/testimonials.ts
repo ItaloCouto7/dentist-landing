@@ -37,8 +37,8 @@ export class TestimonialsComponent {
     },
     {
       name: 'Carlos Eduardo',
-      treatment: 'Ortodontia',
-      text: 'Profissional extremamente competente e carinhosa. O consultório é lindo e moderno. Estou muito satisfeito com o tratamento ortodôntico!',
+      treatment: 'Limpeza e Prevenção',
+      text: 'Meu sorriso ficou muito mais limpo e leve depois da limpeza! Atendimento super cuidadoso e profissional. A Dra. Carolini é maravilhosa.',
       rating: 5
     },
     {
@@ -50,7 +50,7 @@ export class TestimonialsComponent {
     {
       name: 'Roberto Lima',
       treatment: 'Limpeza e Prevenção',
-      text: 'Atendimento impecável! A Dra. Carolini é super atenciosa e dedicada. Me sinto seguro e bem cuidado em todas as consultas.',
+      text: 'Meu sorriso ficou muito mais branco e iluminado! O clareamento ficou super natural. A Dra. Carolini é extremamente cuidadosa e atenciosa. Amei o resultado!',
       rating: 5
     }
   ];
