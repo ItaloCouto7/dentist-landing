@@ -339,6 +339,7 @@ $font-body: 'Montserrat', sans-serif;
     display: flex;
     align-items: center;
     gap: 1rem;
+    color: $color-foreground;
 
     @media (min-width: 640px) {
       gap: 1.25rem;

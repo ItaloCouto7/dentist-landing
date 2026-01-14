@@ -8,17 +8,17 @@ $color-muted-foreground: #8e8279;
 $color-card: #ffffff;
 $color-card-foreground: #5c4033;
 $color-border: #e6cec5;
-$brown-dark: #4D362B;
-$brown-light:#775050;
-$background-section: #FAF8F6;
-
+$brown-dark: #4d362b;
+$brown-light: #775050;
+$background-section: #faf8f6;
 
 $font-title: 'Playfair Display', serif;
 $font-body: 'Montserrat', sans-serif;
 
 .whatsapp-cta {
   padding: 6rem 0;
-background: radial-gradient(circle at 70% 30%, #D4A5A5 0%, #5D4037 80%);  position: relative;
+  background: radial-gradient(circle at 70% 30%, #d4a5a5 0%, #5d4037 80%);
+  position: relative;
   overflow: hidden;
 }
 
@@ -196,7 +196,7 @@ background: radial-gradient(circle at 70% 30%, #D4A5A5 0%, #5D4037 80%);  positi
 @media (max-width: 767px) {
   .whatsapp-cta {
     padding: 4rem 0;
-    background: radial-gradient(circle at 50% 20%, #D4A5A5 0%, #5D4037 90%);
+    background: radial-gradient(circle at 50% 20%, #d4a5a5 0%, #5d4037 90%);
   }
 
   .container {
@@ -204,8 +204,8 @@ background: radial-gradient(circle at 70% 30%, #D4A5A5 0%, #5D4037 80%);  positi
   }
 
   .badge {
-    font-size: 0.875rem;
-    padding: 0.4rem 0.9rem;
+    font-size: 0.75rem;
+    padding: 0.4rem 1rem;
     margin-bottom: 1.25rem;
   }
 

@@ -225,7 +225,9 @@ $font-body: 'Montserrat', sans-serif;
 }
 
 .badge {
-  display: inline-block;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: fit-content;
   background-color: #f1e4e0;
   color: #a67c6d;
